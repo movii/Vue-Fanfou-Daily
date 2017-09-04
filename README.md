@@ -16,3 +16,7 @@ ___
     1. 服务器端用 Express + CornJob 定时抓取饭否精选的数据，提供给前台数据；
     2. 前端主要使用 Vue.js + Vuex + Vue-Router 实现。
 
+___
+
+## 使用
+需要去 LeanCloud 上申请一个 app，将对应的 APP_ID 和 APP_KEY 填入 `config/api.config.js` 中。然后就是终端中运行 `npm run dev:client`。
