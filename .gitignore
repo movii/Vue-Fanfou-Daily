@@ -1,3 +1,5 @@
 node_modules
 .vscode
 /.leanignore
+/api/index.js
+/config/api.config.js
