@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "dev:client": "cross-env NODE_ENV=development && webpack --watch --progress --hide-modules",
-    "build:prod": "cross-env NODE_ENV=production && webpack --watch --progress --hide-modules"
+    "dev:client": "cross-env NODE_ENV=developmen webpack --watch --progress --hide-modules",
+    "build:prod": "cross-env NODE_ENV=production webpack --watch --progress --hide-modules"
   },
   "keywords": [],
   "author": "",
