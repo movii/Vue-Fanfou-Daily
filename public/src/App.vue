@@ -4,7 +4,7 @@
       <h1>饭否每日精选·日历</h1>
       <nav class="inner">
         <ul>
-          <router-link to="/d/today" tag="li" :class="">今日精选</router-link>
+          <router-link to="/d/today" tag="li">今日精选</router-link>
           <router-link to="/calendar" tag="li">日历</router-link>
         </ul>
       </nav>
@@ -21,13 +21,7 @@
 
 export default {
   name: 'app',
-
-  computed: {
-    currentPage () {
-      return this.$route.path
-    }
-  },
-
+  
   data () {
     return {}
   }
@@ -116,8 +110,10 @@ nav.inner > ul > li {
   box-sizing: border-box; 
   padding: .325rem .325rem 0;
   color: #ffffff;
+  cursor: pointer;
 }
-nav.inner > ul > li.current {
+// class .current-page declared in vue-router's linkActiveClass;
+nav.inner > ul > li.current-page {
   background: #ffffff;
   color: #46C1FD;
   border: 2px solid #ffffff;
