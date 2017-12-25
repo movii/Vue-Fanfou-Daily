@@ -8,7 +8,7 @@ Vue.use(Router)
 export function createRouter () {
   return new Router ({
     mode: 'history',
-    linkActiveClass: 'current',
+    linkActiveClass: 'current-page',
     scrollBehavior: () => ({ y: 0 }),
     routes: [
       { path: '/d/:day', name: 'list', component: List },
