@@ -32,7 +32,7 @@ const common_chucks_vendor = new webpack.optimize.CommonsChunkPlugin({
 
 // define 'production' mode for vue
 const prod_mode = new webpack.DefinePlugin({
-  'process.env': { NODE_ENV: '"production"' }
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
 })
 
 // Uglify JavaScript Plugin
