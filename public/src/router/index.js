@@ -8,7 +8,7 @@ const calendar_view = () => import('../pages/Calendar.vue')
 const about_view = () => import('../pages/About.vue')
 
 export function createRouter () {
-  return new Router ({
+  let r = new Router ({
     mode: 'history',
     linkActiveClass: 'current-page',
     scrollBehavior: () => ({ y: 0 }),
@@ -19,4 +19,24 @@ export function createRouter () {
       { path: '*', redirect: '/d/today' }
     ]
   })
+
+  r.afterEach(router => { 
+    router.matched.some(match => {
+      let title 
+
+      switch (match.path) {
+        case '/d/:day': 
+          if (router.params.day === 'today') title = '今日精选'
+          else title = router.params.day + ' 精选内容'
+          break
+        case '/calendar': 
+          title = '日历'
+          break
+      }
+
+      document.title = title + ' - 饭否每日精选'
+    })
+    
+  })
+  return r
 }
