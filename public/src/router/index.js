@@ -32,6 +32,12 @@ export function createRouter () {
         case '/calendar': 
           title = '日历'
           break
+        case '/about':
+          title = '关于'
+          break
+        default:
+          title = '饭否每日精选·日历'
+          break
       }
 
       document.title = title + ' - 饭否每日精选'
