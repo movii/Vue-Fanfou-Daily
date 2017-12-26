@@ -5,6 +5,7 @@ Vue.use(Router)
 
 const list_view = () => import('../pages/List.vue')
 const calendar_view = () => import('../pages/Calendar.vue')
+const about_view = () => import('../pages/About.vue')
 
 export function createRouter () {
   return new Router ({
@@ -14,6 +15,7 @@ export function createRouter () {
     routes: [
       { path: '/d/:day', name: 'list', component: list_view },
       { path: '/calendar', name: 'calendar', component: calendar_view },
+      { path: '/about', name: 'about', component: about_view },
       { path: '*', redirect: '/d/today' }
     ]
   })
