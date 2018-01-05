@@ -1,0 +1,25 @@
+{
+  "env": {
+    "es6": true,
+    "amd": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
+  "rules": {
+    "semi": [2, "never"],
+    "no-trailing-spaces": 2,
+    "indent": [ "error", 2],
+    "camelcase": 2,
+    "vue/name-property-casing": ["error", "kebab-case"],
+    "vue/max-attributes-per-line": 0
+  }
+}
