@@ -17,6 +17,7 @@
 
 仓库中的版本和[线上的版本](http://fanfou-daily.leanapp.cn/)，除了 APP_KEY、APP_SECRET 和被忽略了的 `./dist` 之外完全相同。后续改进也会尽快推送上来保持版本间的一致。
 
+<br/>
 
 ##  🚀 升级到 v2
 仓库中有两个分支，主要的**区别在于爬虫抓取数据存储的姿势不同**，所以导致前端获取数据的方式不同（数据源在[饭否每日精选](http://blog.fanfou.com/digest/)的[官网](http://blog.fanfou.com/digest/json/index.json)上，某一天的精选数据可以通过[这样的链接](http://blog.fanfou.com/digest/json/2018-01-03.daily.json)进行访问）：
