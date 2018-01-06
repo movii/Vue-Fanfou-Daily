@@ -17,7 +17,7 @@
 
 仓库中的版本和[线上的版本](http://fanfou-daily.leanapp.cn/)，除了 APP_KEY、APP_SECRET 和被忽略了的 `./dist` 之外完全相同。后续改进也会尽快推送上来保持版本间的一致。
 
-<br/><br/>
+
 ##  🚀 升级到 v2
 仓库中有两个分支，主要的**区别在于爬虫抓取数据存储的姿势不同**，所以导致前端获取数据的方式不同（数据源在[饭否每日精选](http://blog.fanfou.com/digest/)的[官网](http://blog.fanfou.com/digest/json/index.json)上，某一天的精选数据可以通过[这样的链接](http://blog.fanfou.com/digest/json/2018-01-03.daily.json)进行访问）：
 
@@ -29,15 +29,13 @@
 
 所以，年底（2017年）想做点更新的时候，索性从爬虫开始全部做了修改，以至于前台的代码也做了很多更新，于是有了现在 2.0 版本。
 
-<br/><br/>
+<br/>
 
 ## 📦 使用 
 以下对在 LeanCloud 上保存数据做个大致说明。
-<br/><br/>
 
 ###  下载和安装
 下载代码，使用 `npm install` 安装依赖。
-<br/><br/>
 
 ### 首次抓取所有存量数据并存储至 LeanCloud
 前往 LeanCloud 注册、登陆后，开一个新应用，在该应用的「菜单面板」中的「设置 - 应用 Key」里找到 `App ID` 和 `App Key`，将两者填充项目根目录的 `./leancloud/index` 中:
@@ -58,32 +56,26 @@
 
 ![](screenshots/leancloud_classes.png)
 
-<br/>
 
 #### ⌨️ Serve at localhost
 ```shell
 npm run serve
 ```
-<br/>
-
 #### ⌨️ build development
 ```shell
 npm run build:dev
 ```
-<br/>
-
 #### ⌨️ build production
 ```shell
 npm run build:prod
 ```
-<br/>
 
 ### ☁️ 部署至 LeanCloud 
 LeanCloud 对于 NodeJS 应用的部署指南在此：《[网站托管开发指南 · Node.js](https://leancloud.cn/docs/leanengine_webhosting_guide-node.html)》，很方便。
 
 但如果本身的就习惯通过 Github 来管理项目，那么更推荐其中《[网站托管开发指南 · Node.js - Git 部署](https://leancloud.cn/docs/leanengine_webhosting_guide-node.html#hash-1244513435)》章节，在「仓库 - 设置 - Deploy keys」新建 key 填入到 LeanCloud 应用的 「云引擎 - 部署」中，接着按一下「部署」按钮就可以，简单得不行。
 
-<br/><br/>
+<br/>
 
 ## 🙏🏻 感谢
 - 鸣谢 Z 姐（[@小脸儿](https://github.com/zchan0)）制作的网站 logo（favicon）；
