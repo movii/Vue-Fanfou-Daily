@@ -12,7 +12,8 @@ export function createStore () {
       statuses: {/* statusid: { ... status detail ... } */},
       days: [],
       dailys: {},
-      today: null
+      today: null,
+      activedDay: null
     },
     actions,
     mutations

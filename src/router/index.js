@@ -20,7 +20,7 @@ const About = () => import(
 Vue.use(Router)
 
 export function createRouter () {
-  return new Router({
+  let router = new Router({
     mode: 'history',
     base: '/',
     fallback: false,
@@ -43,18 +43,27 @@ export function createRouter () {
         path: '/calendar',
         name: 'calendar',
         component: Calendar,
+        meta: {
+          title: '日历'
+        },
         caseSensitive: true
       },
       {
         path: '/about',
         name: 'about',
         component: About,
+        meta: {
+          title: '关于 | 饭否每日精选'
+        },
         caseSensitive: true
       },
       {
         path: '/status/:statusId',
         name: 'status',
         component: Status,
+        meta: {
+          title: '状态详情 | 饭否每日精选'
+        },
         caseSensitive: true
       },
       {
@@ -63,4 +72,23 @@ export function createRouter () {
       }
     ]
   })
+
+  router.beforeEach((to, from, next) => {
+    let title
+
+    if (/^\/day\/today/.test(to.path)) {
+      title = '今天精选 | 饭否每日精选'
+    }
+    else if (/^\/day\//.test(to.path)) {
+      title = `${to.params.day} | 饭否每日精选`
+    }
+
+    document.title = title
+      ? title
+      : to.meta.title
+
+    next()
+  })
+
+  return router
 }

@@ -28,5 +28,9 @@ export default {
     statuses.forEach(status => {
       state.statuses[status.statusid] = status
     })
+  },
+
+  SET_ACTIVEDDAY(state, day) {
+    state.activedDay = day
   }
 }

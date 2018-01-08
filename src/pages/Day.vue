@@ -26,12 +26,19 @@ export default {
     }
   },
 
-  beforeMounted () {
-    this.loadStatuses()
+  computed: {
+    day () {
+      return this.$route.params.day
+    }
   },
 
-  created () {
-    this.loadStatuses()
+  beforeRouteEnter (to, from, next) {
+    next($this => {
+      if ($this.$store.state.activedDay !== $this.day) {
+        $this.$store.commit('SET_ACTIVEDDAY', $this.day)
+        $this.loadStatuses()
+      }
+    })
   },
 
   beforeRouteUpdate (to) {
@@ -42,7 +49,7 @@ export default {
     loadStatuses (to = null) {
       let target = to
         ? to.params.day
-        : this.$route.params.day
+        : this.day
       this.statuses = null
       this.$store
         .dispatch('FETCH_DAILY', { day: target })
