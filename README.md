@@ -62,15 +62,15 @@ Profile 中的：[Vue-Fanfou-Daily](https://github.com/movii/Vue-Fanfou-Daily) �
 
 ![](screenshots/leancloud_classes.png)
 
-#### ⌨️ Serve at localhost
+#### Serve at localhost
 ```shell
 npm run serve
 ```
-#### ⌨️ build development
+#### build development
 ```shell
 npm run build:dev
 ```
-#### ⌨️ build production
+#### build production
 ```shell
 npm run build:prod
 ```
