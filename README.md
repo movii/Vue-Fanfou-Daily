@@ -86,9 +86,9 @@ LeanCloud 对于 NodeJS 应用的部署指南在此：《[网站托管开发指�
 - 之前在开发小程序过程中帮助测试反馈的各位小伙伴（奶瓶 @小小小奶瓶 同学发现了很多 bug，尤其感谢）。
 
 ## 相关 blog 文章
-1. [笔记：「饭否精选」微信小程序（一）制作记录](http://movii.github.io/blog/2017/06/01/没能上线的小程序-饭否精选日历/)
-2. [笔记：「饭否精选」微信小程序（二）爬虫部分](http://movii.github.io/blog/2017/06/15/fanfou-daily-wechat-log-scrapy/)
-3. [笔记：「饭否精选」微信小程序（三）小程序开发中遇到的问题](http://movii.github.io/blog/2017/07/15/fanfou-daily-wechat-min-program/)
+1. [笔记：「饭否精选」微信小程序（一）制作记录](https://moxo.io/blog/2017/06/01/wechat-app-of-fanfou-daily/)
+2. [笔记：「饭否精选」微信小程序（二）爬虫部分](https://moxo.io/blog/2017/06/15/fanfou-daily-wechat-app-log-scrapy/)
+3. [笔记：「饭否精选」微信小程序（三）小程序开发中遇到的问题](https://moxo.io/blog/2017/07/15/problems-while-making-fanfou-daily-wechat-app/)
 
 ## License
 MIT License
