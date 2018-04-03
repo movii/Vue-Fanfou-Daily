@@ -4,6 +4,7 @@ const base = require('./webpack.base.config')
 const bundle_anaylizer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const webapck_dev_config = merge(base, {
+  mode: 'development',
   devtool: '#cheap-module-source-map',
   module: {
     rules: [
@@ -14,9 +15,6 @@ const webapck_dev_config = merge(base, {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
-    }),
     new bundle_anaylizer({
       analyzerPort: 3333,
       openAnalyzer: false
