@@ -17,7 +17,6 @@ const loadersOptions = [
 ]
 
 module.exports = {
-  extractCSS: isProd,
   preserveWhitespace: false,
   loaders: {
     scss: isProd
